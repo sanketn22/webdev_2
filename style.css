@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    background-image: url(./89092684.webp);   
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.banner{
+    height: 200px;
+    width: 200px;
+    /* background-size: contain; */
+    background-image: url(./unilogo.png);
+    background-repeat: no-repeat;
+    align-content: center;
+    align-items: center;
+    background-position: center;
+    flex-direction: column;
+    
+}
+
+.butt{
+    margin-left: 20px;
+}
+
+.frm{
+   
+    justify-content: center;
+    text-align: center;
+}
+
+.form1{
+    font-size: 30x;
+    color: bisque;
+    margin-left: 40%;   
+
+}
+
+.header{
+    opacity: 90%;
+    margin-bottom: 20px;
+}
+
+.quali{
+    justify-content: space-between;
+}
+
+ul {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    color: antiquewhite;
+}
+  
+li {
+    margin-bottom: 10px;
+}
+  
+span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #35addc;
+}

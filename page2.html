@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submitted</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container bg-primary-subtle mt-5 header">
+        <h2>Student Registration Form</h2>
+        <ul>
+            <li>Name: <span id="name"></span></li>
+            <li>Email: <span id="email"></span></li>
+            <li>Date of birth: <span id="dob"></span></li>
+            <li>Gender: <span id="gender"></span></li>
+            <li>Contact: <span id="contact"></span></li>
+            <li>Marital Status: <span id="ms"></span></li>
+            <li>Qualifying Exam: <span id="qf"></span></li>
+            <li>Marks Scored: <span id="marks"></span></li>
+            <li>Out of: <span id="outof"></span></li>
+            <li>Percentage: <span id="perc"></span></li>
+        </ul>
+    </div>
+
+    <script>
+        // Retrieve form data from localStorage
+        let fname = localStorage.getItem("name");
+        let gender = localStorage.getItem("gender");
+        let email = localStorage.getItem("email");
+        let marital_status = localStorage.getItem("marital status");
+        let qf = localStorage.getItem("qf");
+        let marks = localStorage.getItem("marks");
+        let outof = localStorage.getItem("outof");
+        let perc = localStorage.getItem("percentage");
+
+
+        // Update HTML with form data
+        document.getElementById("name").innerHTML = fname;
+        document.getElementById("email").innerHTML = email;
+        document.getElementById("gender").innerHTML = gender;
+        // document.getElementById("number").innerHTML = number;
+        document.getElementById("ms").innerHTML = marital_status;
+        document.getElementById("qf").innerHTML = qf;
+        document.getElementById("outof").innerHTML = outof;
+        document.getElementById("perc").innerHTML = perc;
+        // document.getElementById("dob").innerHTML = dob;
+        document.getElementById("marks").innerHTML = marks;
+
+        // Clear localStorage
+        // localStorage.clear();
+
+    </script>
+</body>
+
+</html>

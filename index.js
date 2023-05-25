@@ -1,15 +1,17 @@
-function submit() {
-    // Get form values
-    var fname = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    // var dob = document.getElementById("dob").value;
-    var gender = document.getElementById("gend").value;
-    var number = document.getElementById("contact").value;
-    var marital_status = document.getElementById("ms").value;
-    var qf = document.getElementById("exam").value;
-    var marks = document.getElementById("marks").value;
-    var outof = document.getElementById("outof").value;
-    var percent = document.getElementById("perc").value;
+const submit = (e) => {
+
+   // Get form values
+    let fname = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    // let dob = document.getElementById("dob").value;
+    let gender = document.getElementById("gend").value;
+    let number = document.getElementById("contact").value;
+    let marital_status = document.getElementById("ms").value;
+    let qf = document.getElementById("exam").value;
+    let marks = document.getElementById("marks").value;
+    let outof = document.getElementById("outof").value;
+    let percent = document.getElementById("perc").value;
+
     // Save form values to localStorage
     localStorage.setItem("name", fname);
     localStorage.setItem("email", email);
@@ -21,9 +23,12 @@ function submit() {
     localStorage.setItem("outof", outof);
     localStorage.setItem("percentage", percent);
 
-    // Redirect to new page
-    window.location.href = "next_page.html";
+    console.log("name", "email", "gender", "number");
+    
+    e.preventDefault();
 
-    // Prevent form submission
+    // Redirect to new page
+    location.href = 'page2.html'
+
     return false;
 }

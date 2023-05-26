@@ -6,58 +6,83 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="background: none;">
+    
+    <a href="index.html">
+        <div class="container-fluid banner"></div>
+    </a>
+
     <div class="container bg-primary-subtle mt-5 header">
-        <h2>Student Registration Form</h2>
-        <ul>
-            <li>Name: <span id="name"></span></li>
-            <li>Email: <span id="email"></span></li>
-            <li>Date of birth: <span id="dob"></span></li>
-            <li>Gender: <span id="gender"></span></li>
-            <li>Contact: <span id="contact"></span></li>
-            <li>Marital Status: <span id="ms"></span></li>
-            <li>Qualifying Exam: <span id="qf"></span></li>
-            <li>Marks Scored: <span id="marks"></span></li>
-            <li>Out of: <span id="outof"></span></li>
-            <li>Percentage: <span id="perc"></span></li>
-        </ul>
+        <h2>Submitted</h2>
+        <form class="row">
+
+            <div class="mb-3 mt-3">
+                <label for="name">Name:</label>
+                <li disabled="true" type="text" class="form-control" id="name1"name="name"></li>
+            </div>
+
+            <div class=" mb-3 mt-3">
+                <label for="email">Email:</label>
+                <li type="text" class="form-control" id="email1" placeholder="Enter email" name="email">
+            </div>
+
+
+            <div class=" col-3 mb-3 mt-3">
+                <label for="dob">Date of birth:</label>
+                <li type="text" class="form-control" id="dob1" placeholder="Enter Date Of Birth" name="dob">
+            </div>
+
+            <div class=" col-3 mb-3 mt-3 width 30%">
+                <label for="ms">Gender:</label>
+                <li type="text" class="form-control" aria-label="Default select example" id="gend1">
+
+            </div>
+
+            <div class=" col-3 mb-3 mt-3 width 30%">
+                <label for="contact">Contact Number:</label>
+                <li type="text" class="form-control" id="contact1" placeholder="Enter Number" name="number">
+            </div>
+
+            <div class=" col-3 mb-3 mt-3 width 30%">
+                <label for="ms">Marital Status:</label>
+                <li type="text" class="form-control" aria-label="Default select example" id="ms1">
+
+            </div>
+
+            <div class="row quali">
+                <div class="col-4 mb-3 mt-3">
+                    <label for="exam">Qualifying Exam Passed</label>
+                    <li type="text" class="form-control" id="qf1" placeholder="Enter previous qualifying exam passed"
+                        name="exam">
+                </div>
+                <div class="col-2 mb-3 mt-3">
+                    <label for="marks">Marks Scored</label>
+                    <li type="text" class="form-control" id="marks1" placeholder="Enter marks scored" name="marks">
+                </div>
+                <div class="col-2 mb-3 mt-3">
+                    <label for="marks">Max Marks</label>
+                    <li type="text" class="form-control" id="outof1" placeholder="Enter total marks" name="marks">
+                </div>
+
+                <div class="col-2 mb-3 mt-3 perc">
+                    <label for="perc">Percentage</label>
+                    <li type="text" class="form-control" id="perc1" name="percentage">
+                </div>
+            </div>
+        </form>
     </div>
-
-    <script>
-        // Retrieve form data from localStorage
-        let fname = localStorage.getItem("name");
-        let gender = localStorage.getItem("gender");
-        let email = localStorage.getItem("email");
-        let marital_status = localStorage.getItem("marital status");
-        let qf = localStorage.getItem("qf");
-        let marks = localStorage.getItem("marks");
-        let outof = localStorage.getItem("outof");
-        let perc = localStorage.getItem("percentage");
-
-
-        // Update HTML with form data
-        document.getElementById("name").innerHTML = fname;
-        document.getElementById("email").innerHTML = email;
-        document.getElementById("gender").innerHTML = gender;
-        // document.getElementById("number").innerHTML = number;
-        document.getElementById("ms").innerHTML = marital_status;
-        document.getElementById("qf").innerHTML = qf;
-        document.getElementById("outof").innerHTML = outof;
-        document.getElementById("perc").innerHTML = perc;
-        // document.getElementById("dob").innerHTML = dob;
-        document.getElementById("marks").innerHTML = marks;
-
-        // Clear localStorage
-        // localStorage.clear();
-
-    </script>
+    <script src="script2.js"></script>   
 </body>
 
 </html>
